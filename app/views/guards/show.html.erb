@@ -1,0 +1,8 @@
+<p id="notice"><%= notice %></p>
+
+<%= @guard.last_name %><br>
+<%= @guard.first_name %><br>
+<%= @guard.middle_name %><hr>
+
+<%= link_to 'изменить', edit_guard_path(@guard) %> |
+<%= link_to 'назад', guards_path %>

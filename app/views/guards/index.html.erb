@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Guards</h1>
+
+<table>
+  <thead>
+    <tr>
+      <td>№ п/п</td>
+      <td>Фамилия</td>
+      <td>Имя</td>
+      <td>Отчество</td>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <br>
+    <% @guards.each_with_index do |guard, index| %>
+      <tr>
+        <td><%= "000000" + "#{index + 1}" %></td>
+        <td><%= guard.last_name %></td>
+        <td><%= guard.first_name %></td>
+        <td><%= guard.middle_name %></td>
+        <td><%= link_to 'Show', guard %></td>
+        <td><%= link_to 'Edit', edit_guard_path(guard) %></td>
+        <td><%= link_to 'Destroy', guard, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Guard', new_guard_path %>
