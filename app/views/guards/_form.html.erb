@@ -11,6 +11,14 @@
     </div>
   <% end %>
 
+  <div>
+    <%= form.label 'Фото' %>
+    <%= form.file_field :avatar %>
+  </div>
+  <div>
+    <%# image_tag(@guard.avatar) %>
+  </div>
+
   <div class="actions">
     <%= form.label 'Фамилия' %>
     <%= form.text_field :last_name %>
@@ -24,6 +32,48 @@
   <div class="actions">
     <%= form.label 'Отчество' %>
     <%= form.text_field :middle_name %>
+  </div>
+
+  <div class="actions">
+    <%= form.label 'Дата рождения' %>
+    <%= form.date_field :birth %>
+  </div>
+
+  <div class="actions">
+    <%= form.label 'Адрес регистрации' %>
+    <%= form.text_field :registration_address %>
+  </div>
+
+  <div class="actions">
+    <%= form.label 'Фактический адрес' %>
+    <%= form.text_field :actual_address %>
+  </div>
+
+  <div class="actions">
+    <%= form.label 'Трудоустроен' %>
+    <%= form.date_field :employment %>
+  </div>
+
+  <div class="actions">
+    <%= form.label 'Уволен' %>
+    <%= form.date_field :fired %>
+  </div>
+
+  <br><hr>
+
+  <div class="actions">
+    <%= form.label 'Удостоверение действительно до ' %>
+    <%= form.date_field :validity_certificate %>
+  </div>
+
+  <div class="actions">
+    <%= form.label 'Переодическая проверка действительна до ' %>
+    <%= form.date_field :validity_examination %>
+  </div>
+
+  <div class="actions">
+    <%= form.label 'Медкомиссия действительна до ' %>
+    <%= form.date_field :validity_medical_board %>
   </div>
 
   <div class="actions">

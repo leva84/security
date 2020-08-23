@@ -13,10 +13,10 @@
     </tr>
   </thead>
 
-  <br>
+  <tbody>
     <% @guards.each_with_index do |guard, index| %>
       <tr>
-        <td><%= "000000" + "#{index + 1}" %></td>
+        <td><%= index + 1 %></td>
         <td><%= guard.last_name %></td>
         <td><%= guard.first_name %></td>
         <td><%= guard.middle_name %></td>

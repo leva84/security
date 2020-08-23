@@ -2,7 +2,16 @@
 
 <%= @guard.last_name %><br>
 <%= @guard.first_name %><br>
-<%= @guard.middle_name %><hr>
+<%= @guard.middle_name %><br><br>
+<%= "родился: " + "#{@guard.birth}" %><br>
+<%= "адрес регистрации: " + "#{@guard.registration_address}" %><br>
+<%= "фактичкский адрес: " + "#{@guard.actual_address}" %><br>
+<%= "трудоустроен: " + "#{@guard.employment}" %><br>
+<%= "уволен: " + "#{@guard.fired}" %><br><hr>
+<%= "Актуальность документов" %><br><br>
+<%= "удостоверение действительно до: " + "#{@guard.validity_certificate}" %><br>
+<%= "периодическая проверка действительна до: " + "#{@guard.validity_examination}" %><br>
+<%= "медкомиссия действительна до: " + "#{@guard.validity_medical_board}" %><br><hr>
 
 <%= link_to 'изменить', edit_guard_path(@guard) %> |
 <%= link_to 'назад', guards_path %>
